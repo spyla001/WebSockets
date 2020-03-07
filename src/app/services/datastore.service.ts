@@ -9,7 +9,7 @@ export class DatastoreService {
   Url = environment;
   constructor(private http: HttpClient) { }
 
-  getAnual() {
+  getAnnual() {
     return this.http.get(this.Url.anualRecords);
   }
   getQuaterly() {

@@ -7,7 +7,8 @@ import { RealtimeComponent } from './realtime/realtime.component';
 import { DonutComponent } from './donut/donut.component';
 import { TextboxComponent } from './textbox/textbox.component';
 import { TabledataComponent } from './tabledata/tabledata.component';
-
+import { DatastoreService} from './services/datastore.service';
+import { HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,9 +19,10 @@ import { TabledataComponent } from './tabledata/tabledata.component';
     TabledataComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DatastoreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

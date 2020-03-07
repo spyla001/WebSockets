@@ -6,8 +6,8 @@ export const environment = {
   production: false,
   baseUrl: 'http://localhost:8080',
   webSocket: 'ws://localhost:8080/socket',
-  anualRecords: 'http://localhost:8080/getAnually',
-  quaterlyRecords: 'http://localhost:8080/getQuaterly'
+  anualRecords: 'http://localhost:8080/getAnnually',
+  quaterlyRecords: 'http://localhost:8080/getQuarterly'
 };
 
 

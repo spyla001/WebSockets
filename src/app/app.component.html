@@ -1,4 +1,4 @@
-<app-realtime></app-realtime>
+<app-realtime (nav) = "dataEvent($event)"></app-realtime>
 <div class="container">
-  <app-tabledata [data] = "tabledata"></app-tabledata>
+  <app-tabledata *ngIf="tabledata" [tabledata] = "tabledata"></app-tabledata>
 </div>

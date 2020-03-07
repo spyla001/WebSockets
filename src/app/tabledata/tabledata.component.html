@@ -17,25 +17,25 @@
           </tr>
           </thead>
           <tbody>
-          <tr>
+          <tr *ngFor ="let data of tabledata">
             <th scope="row">
               <div class="media align-items-center">
                 <div class="media-body">
-                  <span class="mb-0 text-sm">Argon Design System</span>
+                  <span class="mb-0 text-sm">{{data.id}}</span>
                 </div>
               </div>
             </th>
             <td>
-              $2,500 USD
+              {{data.actionName}}
             </td>
             <td>
-
+              {{data.taskName}}
             </td>
             <td>
-
+              {{data.createdTime}}
             </td>
             <td class="text-right">
-            In Progress
+              {{data.status}}
             </td>
           </tr>
 

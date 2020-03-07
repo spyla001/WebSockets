@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tracker';
+  tabledata;
+  dataEvent(event) {
+    console.log(event);
+    this.tabledata = event;
+  }
 }
