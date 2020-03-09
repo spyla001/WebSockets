@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-textbox',
@@ -6,11 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./textbox.component.css']
 })
 export class TextboxComponent implements OnInit {
-
+@Output() data;
   constructor() { }
 
   ngOnInit() {
+    if (!this.data) {
+      return;
+    }
+    console.log(this.data);
   }
-
-
 }
