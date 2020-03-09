@@ -15,5 +15,13 @@ export class DatastoreService {
   getQuaterly() {
     return this.http.get(this.Url.quaterlyRecords);
 }
+getAnnualSum() {
+    return this.http.get(this.Url.annualSummary);
+}
+
+getQuarterSum() {
+    return this.http.get(this.Url.quarterSummary);
+}
+
 }
 

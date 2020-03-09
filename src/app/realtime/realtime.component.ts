@@ -13,6 +13,7 @@ export class RealtimeComponent implements OnInit {
 myWeb: WebSocketSubject<any> = webSocket('ws://localhost:8080/socket')
   data = [{name: 'star', orders: 400}, {name: 'rain', orders: 500}, {name: 'naix', orders: 500}, {name: 'droop', orders: 270}];
   tabledata: any;
+  textbox: any;
   pointer: string;
   constructor(private datastore: DatastoreService) { }
 
@@ -22,11 +23,11 @@ myWeb: WebSocketSubject<any> = webSocket('ws://localhost:8080/socket')
       msg => {
        console.log(this.data);
        if (this.pointer === 'quarterly') {
-         this.getQuarter();
+         this.getQuarterSummary();
        } else if (this.pointer === 'yearly') {
-         this.getAnnual();
+         this.getAnnualSummary();
        } else {
-         this.getAnnual();
+         this.getAnnualSummary();
        }
       }
     );
@@ -45,6 +46,22 @@ myWeb: WebSocketSubject<any> = webSocket('ws://localhost:8080/socket')
           this.tabledata = data;
           this.nav.emit(data); });
   }
+
+  getAnnualSummary() {
+    this.datastore.getAnnualSum().subscribe(
+      data => {
+        this.textbox = data;
+      }
+    );
+  }
+  getQuarterSummary() {
+    this.datastore.getQuarterSum().subscribe(
+      data => {
+        this.textbox = data;
+      }
+    );
+  }
+
   onClick(value: string) {
     if (value === 'quarterly') {
       this.pointer = value;

@@ -7,7 +7,9 @@ export const environment = {
   baseUrl: 'http://localhost:8080',
   webSocket: 'ws://localhost:8080/socket',
   anualRecords: 'http://localhost:8080/getAnnually',
-  quaterlyRecords: 'http://localhost:8080/getQuarterly'
+  quaterlyRecords: 'http://localhost:8080/getQuarterly',
+  annualSummary: 'http://localhost:8080/getAnnuallySummary',
+  quarterSummary: 'http://localhost:8080/getQuarterlySummary'
 };
 
 
