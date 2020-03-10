@@ -52,7 +52,7 @@ export class DonutComponent implements OnInit, OnChanges {
 
     const arc = d3.arc()
         .outerRadius(element.offsetHeight / 2)
-        .innerRadius(element.offsetHeight / 4);
+        .innerRadius(element.offsetHeight / 3);
 
     console.log((pie(data)));
 

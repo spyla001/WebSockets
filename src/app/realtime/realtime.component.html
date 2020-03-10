@@ -1,19 +1,46 @@
 
 <div class="jumbotron jumbotron-fluid">
-  <div class="d-flex flex-row-reverse bd-highlight">
-  <button type="button" class="btn btn-primary" (click)="onClick('quarterly')">quarterly</button>
-  <button type="button" class="btn btn-secondary" (click)="onClick('yearly')">Yearly</button>
-  </div>
-    <div class="row">
-      <div class="col-lg-9">
-       <app-textbox [data] ="textbox"></app-textbox>
+  <div class="container">
+    <ul class="nav nav-tabs flex-row-reverse mb-3">
+      <li class="nav-item">
+        <a class="nav-link"  tabindex="-1" aria-disabled="true" (click)="onClick('yearly')">Yearly</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"  tabindex="-1" aria-disabled="true" (click)="onClick('quarterly')">Quarterly</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"  tabindex="-1" aria-disabled="true" (click)="onClick('monthly')">Monthly</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"  tabindex="-1" aria-disabled="true" (click)="onClick('weekly')">Weekly</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"  tabindex="-1" aria-disabled="true" (click)="onClick('daily')">Daily</a>
+      </li>
+    </ul>
+    <div class="row justify-content-between">
+      <div class="col-lg-7 my-auto">
+       <app-textbox [data]="textbox"></app-textbox>
       </div>
-      <div class="col-lg-3">
+      <div class="col-lg-4">
         <div class="card">
-          <div class="card-body " style="height: 10rem;">
-            <app-donut [data]="data"></app-donut>
+          <div class="card-body"  >
+            <div class="row">
+              <div class="col">
+                <i class="fas fa-bars"></i>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <app-donut [data]="data"></app-donut>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</div>
+<div class="container">
+  <h1>{{pointer}}</h1>
 </div>

@@ -22,6 +22,25 @@ getAnnualSum() {
 getQuarterSum() {
     return this.http.get(this.Url.quarterSummary);
 }
+getMonthlySum() {
+    return this.http.get(this.Url.monthlySummary);
+  }
+  getWeeklySum() {
+    return this.http.get(this.Url.weeklySummary);
+  }
+  getDailySum() {
+    return this.http.get(this.Url.dailySummary);
+  }
+  getDailyReacords() {
+    return this.http.get(this.Url.daily);
+  }
 
+  getMonthlyRecord() {
+    return this.http.get(this.Url.monthlyRecords);
+  }
+
+  getWeeklyRecords() {
+    return this.http.get(this.Url.weekly);
+  }
 }
 

@@ -9,6 +9,28 @@
   justify-content: center;
 }
 
-.jumbotron {
+.nav-link {
+  border: 1px solid #DCDCDC;
+  box-sizing: border-box;
+  font-size: 0.75rem;
+  padding: .25rem .9rem;
+}
+li.nav-item:first-child a.nav-link{
+  border-bottom-right-radius: 40%;
+  border-top-right-radius: 40%;
+}
 
+li.nav-item:last-child a.nav-link{
+  border-bottom-left-radius: 40%;
+  border-top-left-radius: 40%;
+}
+
+.nav-link:active {
+background-color: grey;
+}
+.nav-tabs {
+  text-decoration: none;
+}
+.nav{
+  border:none;
 }

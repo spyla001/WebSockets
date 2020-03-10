@@ -9,6 +9,7 @@ import { TextboxComponent } from './textbox/textbox.component';
 import { TabledataComponent } from './tabledata/tabledata.component';
 import { DatastoreService} from './services/datastore.service';
 import { HttpClientModule} from '@angular/common/http';
+import { SingleComponent } from './single/single.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +17,8 @@ import { HttpClientModule} from '@angular/common/http';
     RealtimeComponent,
     DonutComponent,
     TextboxComponent,
-    TabledataComponent
+    TabledataComponent,
+    SingleComponent
   ],
   imports: [
     BrowserModule,

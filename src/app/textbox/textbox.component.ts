@@ -6,7 +6,7 @@ import {Component, OnInit, Input} from '@angular/core';
   styleUrls: ['./textbox.component.css']
 })
 export class TextboxComponent implements OnInit {
-@Input() data;
+ @Input() data;
   constructor() { }
 
   ngOnInit() {

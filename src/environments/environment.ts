@@ -9,7 +9,13 @@ export const environment = {
   anualRecords: 'http://localhost:8080/getAnnually',
   quaterlyRecords: 'http://localhost:8080/getQuarterly',
   annualSummary: 'http://localhost:8080/getAnnuallySummary',
-  quarterSummary: 'http://localhost:8080/getQuarterlySummary'
+  quarterSummary: 'http://localhost:8080/getQuarterlySummary',
+  monthlyRecords: 'http://localhost:8080/getMonthly',
+  weekly: 'http://localhost:8080/getWeekly',
+  daily: 'http://localhost:8080/getDaily',
+  monthlySummary: 'http://localhost:8080/getDailySummary',
+  weeklySummary: 'http://localhost:8080/getDailySummary',
+  dailySummary: 'http://localhost:8080/getDailySummary'
 };
 
 
